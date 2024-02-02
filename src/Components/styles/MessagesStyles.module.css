@@ -1,0 +1,79 @@
+.mainInfo{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 2px solid #ffee1d;
+    background-color: black;
+}
+.image{
+    width: 50px;
+    height: 50px;
+    margin-right: 40px;
+
+}
+.image>img{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+.messagesContainer {
+    margin-top: 100px;
+    width: 100%;
+    margin-bottom: 100px;
+}
+.message{
+    padding: 10px;
+    border: 1px solid #ffee1d;
+    border-radius: 10px;
+    word-wrap: break-word;
+    color: black;
+    margin-top: 20px;
+}
+.my{
+    width: 60%;
+    margin-left: 35%;
+    background-color: #ffee1d;
+}
+.yours{
+    width: 60%;
+    margin-right: 35%;
+    background-color: white;
+}
+.form{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: black;
+}
+.text{
+    width: 80%;
+    height: 60px;
+    resize: none;
+    padding: 0;
+    border: none;
+}
+.button{
+
+    outline: none;
+    border: none;
+    color: black;
+    font-weight: 800;
+    font-size: 45px;
+    background-color: #ffee1d;
+    width: 20%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+}
+.button>div{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}

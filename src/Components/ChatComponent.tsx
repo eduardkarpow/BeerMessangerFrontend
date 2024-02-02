@@ -1,17 +1,20 @@
 import React from 'react';
 import styles from "./styles/ChatsStyles.module.css";
-const ChatComponent = () => {
+import {ChatPropsModel} from "../models/ChatPropsModel";
+import {STATIC_URL} from "../graphql";
+import {NavLink} from "react-router-dom";
+const ChatComponent = (props:ChatPropsModel) => {
     return (
-        <div className={styles.chat}>
+        <NavLink to={`/chat/${props.id}`} className={styles.chat}>
             <div className={styles.main}>
-                <div className={styles.image}><img src="https://postium.ru/wp-content/uploads/2023/06/shedevrum.jpg" alt=""/></div>
+                <div className={styles.image}><img src={STATIC_URL + (props.avatar || "images/+79991119978.jpg")} alt=""/></div>
                 <div className={styles.info}>
-                    <div className={styles.name}>Тестовый пользователь</div>
-                    <div className={styles.last_message}>Привет мир!!!</div>
+                    <div className={styles.name}>{`${props.firstName} ${props.lastName}`}</div>
+                    <div className={styles.last_message}>{props.lastMessage}</div>
                 </div>
             </div>
-            <div className={styles.date}>02.12.2023</div>
-        </div>
+            <div className={styles.date}>{props.dateTime.slice(5,10)}</div>
+        </NavLink>
     );
 };
 
